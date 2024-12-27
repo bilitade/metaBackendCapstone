@@ -1,8 +1,10 @@
 
 from django.urls import path
-from .views import index
+from .views import MenuView
 
 urlpatterns=[
-path('',view=index )
+
+path('menu/', MenuView.as_view()),
+path('menu/<int:pk>', MenuView.as_view())
 
 ]
