@@ -19,3 +19,4 @@ class MenuView(APIView):
             serializer.save()
             return Response({"status": "success", "data": serializer.data})
         return Response({"status": "error", "errors": serializer.errors}, status=400)
+
