@@ -1,10 +1,7 @@
+from django.urls import path
+from .views import MenuListView, MenuDetailView
 
-from django.urls import path, include
-from .views import MenuView
-
-urlpatterns=[
-
-path('menus/', MenuView.as_view()),
-path('menu/<int:pk>', MenuView.as_view()),
-
+urlpatterns = [
+    path('menus/', MenuListView.as_view(), name='menu-list-create'),
+    path('menus/<int:pk>/', MenuDetailView.as_view(), name='menu-detail'),
 ]
